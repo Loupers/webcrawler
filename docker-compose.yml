@@ -39,4 +39,4 @@ services:
         condition: service_healthy
     volumes:
       - ./backend/resources/:/liquibase/changelog/
-    command: --url=jdbc:postgresql://postgres:5432/database?user=user&password=password --changeLogFile=changelog.xml update
+    command:  --changeLogFile=changelog.xml update --url="jdbc:postgresql://postgres:5432/database?user=user&password=password"
